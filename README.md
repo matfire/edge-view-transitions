@@ -1,5 +1,8 @@
 # Edge View Transitions
 
+![NPM Version](https://img.shields.io/npm/v/%40matfire%2Fedge-view-transitions)
+![GitHub Release](https://img.shields.io/github/v/release/matfire/edge-view-transitions)
+
 utilities to handle view transitions when using [edge.js](https://edgejs.dev/)
 
 ## Installation
