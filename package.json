@@ -1,0 +1,33 @@
+{
+  "name": "@matfire/edge-view-transitions",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "bundle": true,
+    "outdir": "dist",
+    "format": "esm",
+    "minify": true,
+    "dts": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "edge.js": "^6.0.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}
