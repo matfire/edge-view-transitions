@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.8.1",
+    "@matfire/edge-view-transitions": "link:..",
+    "edge.js": "^6.0.1",
+    "hono": "^4.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^3.12.2"
+  }
+}
