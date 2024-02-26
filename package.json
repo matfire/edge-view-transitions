@@ -10,7 +10,8 @@
     "build": "tsup"
   },
   "files": [
-    "dist/index.js"
+    "dist/index.js",
+    "dist/index.d.ts"
   ],
   "tsup": {
     "entry": [
