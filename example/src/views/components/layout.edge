@@ -13,7 +13,7 @@
     </main>
 
     <script>
-        const handleLinks = () => {
+        function handleLinks() {
             document.querySelectorAll('a').forEach(a => {
                 console.log(a)
                 a.addEventListener('click', e => {
@@ -28,6 +28,11 @@
                         const parser = new DOMParser()
                         const doc = parser.parseFromString(html, 'text/html')
                         document.querySelector('main').innerHTML = doc.querySelector('main').innerHTML
+                        document.querySelectorAll("main > script").forEach((e) => {
+                            const script = document.createElement('script')
+                            script.innerHTML = e.innerHTML
+                            e.parentNode.replaceChild(script, e)
+                        })
                         history.pushState({}, '', a.href)
                         handleLinks()
                     })

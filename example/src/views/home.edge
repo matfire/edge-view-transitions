@@ -20,12 +20,14 @@
 </div>
 
 <script>
-    const cube = document.getElementById('cube');
+    if (!cube) {
+        let cube = document.getElementById('cube');
+    }
     cube.addEventListener('click', () => {
         document.startViewTransition(() => {
             cube.classList.toggle('blue');
         });
-    });
+    })
 </script>
 
 <a href="/details">details</a>
