@@ -8,6 +8,9 @@ dependencies:
   '@hono/node-server':
     specifier: ^1.8.1
     version: 1.8.1
+  '@hotwired/turbo':
+    specifier: ^8.0.3
+    version: 8.0.3
   '@matfire/edge-view-transitions':
     specifier: link:..
     version: link:..
@@ -229,6 +232,11 @@ packages:
   /@hono/node-server@1.8.1:
     resolution: {integrity: sha512-9ondWs/5EuyZOd/iyiRp0GQfMEq+IA+IbV8Wy2bgdr5+cC55I3xbQrqtXKprw7jJhfvq3IVw7ALiuvCEmLdCAA==}
     engines: {node: '>=18.14.1'}
+    dev: false
+
+  /@hotwired/turbo@8.0.3:
+    resolution: {integrity: sha512-qLgp7d6JaegKjMToTJahosrFxV3odfSbiekispQ3soOzE5jnU+iEMWlRvYRe/jvy5Q+JWoywtf9j3RD4ikVjIg==}
+    engines: {node: '>= 14'}
     dev: false
 
   /@lukeed/ms@2.0.2:

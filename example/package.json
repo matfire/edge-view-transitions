@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.8.1",
+    "@hotwired/turbo": "^8.0.3",
     "@matfire/edge-view-transitions": "link:..",
     "edge.js": "^6.0.1",
     "hono": "^4.0.6"

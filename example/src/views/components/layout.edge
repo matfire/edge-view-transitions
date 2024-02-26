@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
+
     <title>Document</title>
+    <script src="/assets/turbo.js" defer></script>
 </head>
+
+
 
 <body>
     <style>
@@ -46,36 +51,6 @@
     <main>
         {{{await $slots.main()}}}
     </main>
-
-    <script>
-        function handleLinks() {
-            document.querySelectorAll('a').forEach(a => {
-                console.log(a)
-                a.addEventListener('click', e => {
-                    e.preventDefault()
-                    if (!document.startViewTransition()) {
-                        alert('Transition not supported')
-                        return
-                    }
-                    document.startViewTransition(async () => {
-                        const res = await fetch(a.href)
-                        const html = await res.text()
-                        const parser = new DOMParser()
-                        const doc = parser.parseFromString(html, 'text/html')
-                        document.querySelector('main').innerHTML = doc.querySelector('main').innerHTML
-                        document.querySelectorAll("main > script").forEach((e) => {
-                            const script = document.createElement('script')
-                            script.innerHTML = e.innerHTML
-                            e.parentNode.replaceChild(script, e)
-                        })
-                        history.pushState({}, '', a.href)
-                        handleLinks()
-                    })
-                })
-            })
-        }
-        document.onload = handleLinks()
-    </script>
 </body>
 
 </html>

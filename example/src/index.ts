@@ -1,8 +1,11 @@
 import { serve } from "@hono/node-server";
+import { serveStatic } from "@hono/node-server/serve-static";
 import edge from "edge.js";
 import { Hono } from "hono";
 import { edgeViewTransitions } from "@matfire/edge-view-transitions";
 const app = new Hono();
+app.use("/assets/*", serveStatic({ root: "./" }));
+
 edge.use(edgeViewTransitions);
 edge.mount(new URL("./views", import.meta.url));
 
