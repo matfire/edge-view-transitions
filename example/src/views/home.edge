@@ -1,4 +1,32 @@
 @component('components/layout')
+<style>
+    .cube {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    .blue {
+        transform: translateX(200px);
+        background-color: blue;
+    }
+</style>
 <p style="{{transitionName('para')}}">this is a paragraph</p>
+
+<div>
+    you can also move an element on the same page
+    <div id="cube" class="cube blue">
+
+    </div>
+</div>
+
+<script>
+    const cube = document.getElementById('cube');
+    cube.addEventListener('click', () => {
+        document.startViewTransition(() => {
+            cube.classList.toggle('blue');
+        });
+    });
+</script>
+
 <a href="/details">details</a>
 @end

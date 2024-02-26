@@ -24,12 +24,10 @@
                 document.startViewTransition(async () => {
                     const res = await fetch(a.href)
                     const html = await res.text()
-
                     const parser = new DOMParser()
                     const doc = parser.parseFromString(html, 'text/html')
                     document.querySelector('main').innerHTML = doc.querySelector('main').innerHTML
-                    //history.pushState({}, '', a.href)
-
+                    history.pushState({}, '', a.href)
                 })
             })
         })
