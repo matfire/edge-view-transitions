@@ -1,6 +1,6 @@
 {
   "name": "@matfire/edge-view-transitions",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -10,7 +10,8 @@
     "build": "tsup"
   },
   "files": [
-    "dist/index.js"
+    "dist/index.js",
+    "dist/index.d.ts"
   ],
   "tsup": {
     "entry": [

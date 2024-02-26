@@ -36,3 +36,21 @@ renders to:
 ```html
 <p style="view-transition-name: para;">this is a paragraph</p>
 ```
+
+### Transition Group
+
+Useful when you need to write styles for view transitions, it will be replaced with the right ::view-transition selector. You can use it like this: `{{transitionGroup('name_of_element', 'old|new')}}`
+
+These lines:
+```html
+{{transitionGroup()}}
+{{transitionGroup('para')}}
+{{transitionGroup('para', 'new')}}
+```
+
+renders to:
+```css
+::view-transition-old(root)
+::view-transition-old(para)
+::view-transition-new(para)
+```
