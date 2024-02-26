@@ -8,6 +8,13 @@
 </head>
 
 <body>
+    <style>
+        {{transitionGroup('para')}},
+        {{transitionGroup('para', 'new')}} {
+            animation-duration: 2s;
+        }
+    </style>
+
     <main>
         {{{await $slots.main()}}}
     </main>
