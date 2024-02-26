@@ -9,9 +9,37 @@
 
 <body>
     <style>
+
+        @keyframes shrink-x {
+            from {
+              transform: scaleX(1);
+            }
+            to {
+              transform: scaleX(0);
+            }
+          }
+
+        @keyframes grow-x {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+        
+        {{transitionGroup('para')}} {
+            animation: 0.25s linear both shrink-x;
+          }
+        
+        {{transitionGroup('para', 'new')}} {
+            animation: 0.25s 0.25s linear both grow-x;
+        }
+
         {{transitionGroup('para')}},
         {{transitionGroup('para', 'new')}} {
-            animation-duration: 2s;
+            transform-origin: left center;
+
         }
     </style>
 
