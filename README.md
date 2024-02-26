@@ -7,6 +7,11 @@ utilities to handle view transitions when using [edge.js](https://edgejs.dev/)
 
 ## Installation
 
+- Install with your preferred package manager
+```sh
+npm|pnpm|yarn install|add @matfire/edge-view-transitions
+```
+
 ## Usage
 
 - register the plugin with your edge instance
