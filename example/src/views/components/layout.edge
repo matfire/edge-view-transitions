@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        {{{await $slots.main()}}}
+    </main>
+
+    <script>
+        document.querySelectorAll('a').forEach(a => {
+            console.log(a)
+            a.addEventListener('click', e => {
+                e.preventDefault()
+                if (!document.startViewTransition()) {
+                    alert('Transition not supported')
+                    return
+                }
+                document.startViewTransition(async () => {
+                    const res = await fetch(a.href)
+                    const html = await res.text()
+
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(html, 'text/html')
+                    document.querySelector('main').innerHTML = doc.querySelector('main').innerHTML
+                    //history.pushState({}, '', a.href)
+
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

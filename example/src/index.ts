@@ -11,7 +11,7 @@ app.get("/", async (c) => {
 });
 
 app.get("/details", async (c) => {
-  return c.text(await edge.render("details"));
+  return c.html(await edge.render("details"));
 });
 
 const port = 3000;
