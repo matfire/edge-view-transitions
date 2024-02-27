@@ -6,6 +6,10 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matfire/edge-view-transitions.git"
+  },
   "scripts": {
     "build": "tsup"
   },
@@ -23,9 +27,9 @@
     "minify": true,
     "dts": true
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["edge.js", "view-transitions"],
+  "author": "Matteo Gassend",
+  "license": "MIT",
   "devDependencies": {
     "edge.js": "^6.0.1",
     "tsup": "^8.0.2",
